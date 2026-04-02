@@ -1,3 +1,5 @@
+// This function will randomly return either "rock", "paper", or "scissors"
+
 function getComputerChoice() {
     let getRandomInt = (max) => {
         return Math.floor(Math.random() * max);
@@ -12,8 +14,12 @@ function getComputerChoice() {
     } else {
         result = "scissors";
     }
-    
+
     return result;
 }
 
-console.log(getComputerChoice()); 
+const playGame = document.getElementById("playButton");
+
+playGame.addEventListener("click", () => {
+    let userSelection = prompt("Enter rock, paper, or scissors:");
+});

@@ -14,12 +14,17 @@ function getComputerChoice() {
     } else {
         result = "scissors";
     }
-
     return result;
 }
+
+// This function will get the user's choice of "rock", "paper", or "scissors" and return it
 
 const playGame = document.getElementById("playButton");
 
 playGame.addEventListener("click", () => {
     let userSelection = prompt("Enter rock, paper, or scissors:");
+
+    alert('You chose ' + userSelection.charAt(0).toUpperCase() + userSelection.slice(1).toLowerCase() + '.');
+
+    return userSelection;
 });
